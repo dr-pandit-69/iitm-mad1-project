@@ -1,0 +1,40 @@
+openapi: 3.0.0
+info:
+  title: Flask API
+  description: API for managing categories, products, and cart functionality
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000
+    description: Local development server
+paths:
+  /api/categories:
+    get:
+      summary: Get all categories
+      responses:
+        '200':
+          description: Successful response
+  /api/products_home:
+    get:
+      summary: Get featured products for home page
+      responses:
+        '200':
+          description: Successful response
+  /api/add_to_cart:
+    post:
+      summary: Add item to the cart
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                i_id:
+                  type: string
+                quantity:
+                  type: integer
+      responses:
+        '200':
+          description: Successful response
+        '401':
+          description: Unauthorized request

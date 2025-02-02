@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/register.css') }}">
+</link>
+{% endblock %}
+
+{% block title %}
+{{data[1]}}'s Account Details
+{% endblock %}
+{% block content %}
+<section1>
+
+
+<div class="registration-box">
+
+  <div class="form-value">
+
+    <form method="post">
+
+      <h2>{{data[3]}}</br> Account Details </h2>
+      
+      
+
+      <div class="inputbox">
+
+        <ion-icon name="mail-outline"></ion-icon>
+        
+        <input type="text" name="fname"  value="{{ request.form['fname'] }}">
+      </input>
+
+        <label>First Name, Existing: {{data[1]}}</label>
+
+      </div>
+      
+      <div class="inputbox">
+
+        <ion-icon name="mail-outline"></ion-icon>
+        
+        <input type="text" name="dob" value="{{ request.form['dob'] }}">
+      </input>
+
+        <label>Date of Birth (DD/MM/YYYY), Existing: {{data[2]}}</label>
+
+      </div>
+  
+      <div class="inputbox">
+
+        <ion-icon name="mail-outline"></ion-icon>
+        
+        <input type="text" name="phone_num" value="{{ request.form['phone_num'] }}">
+      </input>
+
+        <label>Phone Number,  Existing: {{data[4]}}</label>
+
+      </div>
+    
+      <div class="inputbox">
+
+        <ion-icon name="mail-outline"></ion-icon>
+        
+        <input type="text" name="address"value="{{ request.form['address'] }}">
+      </input>
+
+        <label>Residential Address,  Existing: {{data[5]}}</label>
+
+      </div>
+      
+  
+      <div class="inputbox">
+
+        <ion-icon name="lock-closed-outline"></ion-icon>
+
+        <input type="text" name="pwd" value="{{ request.form['pwd'] }}">
+      </input>
+
+        <label>Password,  Existing: {{data[6]}}</label>
+
+      </div>
+      <div class="register">
+
+        <p>Delete my account? <a href="{{ url_for('deletion_page')}}">Click here</a></p>
+
+      </div>
+
+    
+
+      <button type="submit">Modify Details</button>
+
+      
+   
+
+  </div>
+
+</div>
+</form>
+</section1>
+
+{% endblock %}

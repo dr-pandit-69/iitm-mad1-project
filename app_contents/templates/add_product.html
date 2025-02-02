@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/register.css') }}">
+</link>
+{% endblock %}
+
+{% block title %}
+Adding A New Product
+{% endblock %}
+{% block content %}
+
+
+<section1>
+ 
+
+  <div class="registration-box">
+
+    <div class="form-value">
+
+      <form method="post" enctype="multipart/form-data">
+
+        <h2>Adding a New Product </h2>
+        
+
+        
+
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="name"  required   value="{{ request.form['name'] }}">
+        </input>
+
+          <label> Name of the Product</label>
+
+        </div>
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="description"  required  value="{{ request.form['description'] }}">
+        </input>
+
+          <label> Description of the Product</label>
+
+        </div>
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="exp_date"  required  value="{{ request.form['exp_date'] }}">
+        </input>
+
+          <label> Expiry Date in DD/MM/YYYY format or N/A</label>
+
+        </div>
+
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="price"  required  value="{{ request.form['price'] }}">
+        </input>
+
+          <label> Price of the Product</label>
+
+        </div>
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="qty"  required  value="{{ request.form['qty'] }}">
+        </input>
+
+          <label> Quantity of the Product</label>
+
+        </div>
+
+
+
+        
+        
+        
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="units" required value="{{ request.form['units'] }}">
+        </input>
+
+          <label> Units of the Product</label>
+       
+        </div>
+        <div class="form-value">
+          <label class="upload"> Image: &nbsp </label> 
+          <input type="file" id="img" required name="image" class="upload" /> 
+          <label class="upload"> Category: &nbsp </label> 
+          <select id="c_id" name="c_id" value="{{ request.form['c_id'] }}" required class="upload1 text-right">
+            {% for key,item in cat_list.items() %}
+            <option value="{{ key }}">{{ item }}</option>
+
+          
+            {% endfor %}
+          </select>
+          
+       
+         
+       
+        </div>
+
+       
+     
+
+        <button type="submit">Add Product</button>
+        
+       
+
+       
+      </form>
+        </div>
+        </div>
+        </section1>
+
+{% endblock %}

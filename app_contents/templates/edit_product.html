@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/register.css') }}">
+</link>
+{% endblock %}
+
+{% block title %}
+Modifying {{product.Name}}
+{% endblock %}
+{% block content %}
+
+
+<section1>
+ 
+
+  <div class="registration-box">
+
+    <div class="form-value">
+
+      <form method="post" enctype="multipart/form-data">
+
+        <h2>Modifying {{product.Name}} </h2>
+        
+
+        
+
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="name"  value="{{ request.form['name'] }}" placeholder="{{product.Name}}">
+        </input>
+
+          <label>{{product.Name}}'s New Name</label>
+
+        </div>
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="description"  value="{{ request.form['description'] }}" placeholder="{{product.description}}">
+        </input>
+
+          <label>{{product.Name}}'s New Description  </label>
+
+        </div>
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="exp_date" value="{{ request.form['exp_date'] }}">
+        </input>
+
+          <label> Expiry Date of the product in DD/MM/YYYY format</label>
+
+        </div>
+
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="price"  value="{{ request.form['price'] }}" placeholder="{{product.price}}">
+        </input>
+
+          <label>{{product.Name}}'s New Price</label>
+
+        </div>
+        <div class="inputbox">
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="qty" value="{{ request.form['qty'] }}" placeholder="{{product.qty}}">
+        </input>
+
+          <label>{{product.Name}}'s New Quantity</label>
+
+        </div>
+        
+    
+        
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="units" value="{{ request.form['units'] }}" placeholder="{{product.units}}">
+        </input>
+
+          <label>{{product.Name}}'s New Units</label>
+
+        </div>
+      
+       
+        <div class="form-value">
+          <label class="upload"> Image: &nbsp </label> 
+        <input type="file" id="image" name="image" class="upload" >
+        </input> 
+          <label class="upload"> Category: &nbsp </label> 
+          <select id="c_id" name="c_id" value="{{ request.form['c_id'] }}" class="upload2 text-right">
+            {% for key,item in cat_list.items() %}
+            <option value="{{ key }}">{{ item }}</option>
+
+          
+            {% endfor %}
+          </select>
+          
+       
+         
+       
+        </div>
+        <div class="register">
+
+          <p>Delete Product? <a href="{{ url_for('delete_prod', id=product.iid)}}">Click here</a></p>
+  
+        </div>
+       
+
+       
+
+        <button type="submit">Modify Product</button>
+      </form>
+        </div>
+        </div>
+        </section1>
+
+{% endblock %}

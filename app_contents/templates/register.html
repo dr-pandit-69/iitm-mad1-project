@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/register.css') }}">
+</link>
+{% endblock %}
+
+{% block title %}
+New User Registration
+{% endblock %}
+{% block content %}
+
+
+<section1>
+ 
+
+  <div class="registration-box">
+
+    <div class="form-value">
+
+      <form method="post">
+
+        <h2>Registration</h2>
+        
+
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="fname" required value="{{ request.form['fname'] }}">
+        </input>
+
+          <label>First Name</label>
+
+        </div>
+        
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="dob" required value="{{ request.form['dob'] }}">
+        </input>
+
+          <label>Date of Birth (DD/MM/YYYY)</label>
+
+        </div>
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="email_add" required value="{{ request.form['email_add'] }}">
+        </input>
+
+          <label>Email Address</label>
+
+        </div>
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="phone_num" required value="{{ request.form['phone_num'] }}">
+        </input>
+
+          <label>Phone Number</label>
+
+        </div>
+      
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="address" required value="{{ request.form['address'] }}">
+        </input>
+
+          <label>Residential Address</label>
+
+        </div>
+        
+    
+    
+        <div class="inputbox">
+
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          
+
+          
+          <div class="password-input-container" class="inputbox">
+           
+            <input type="password" class="password-input"  name="pwd" required value="{{ request.form['pwd'] }}" placeholder="Password">
+            
+        </div>
+        
+        </input>
+
+          
+
+        </div>
+      
+
+        <button type="submit">Register</button>
+
+        
+     
+
+    </div>
+
+  </div>
+</form>
+
+</section1>
+
+
+{% endblock content %}

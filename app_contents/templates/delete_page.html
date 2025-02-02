@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/delete_page.css') }}">
+</link>
+{% endblock %}
+{% block title %}
+{{data[1]}}'s Account Deletion prompt
+{% endblock %}
+
+
+{% block content %}
+
+
+    
+     
+
+
+    
+<div class="section1">
+            <div class="form-box">
+                
+              
+                  <div class="form-center">
+                    <form  method="post" class="delete">
+                      <h2>Are you sure you want to delete the account with email {{data[3]}}? </h2>
+                      <div class="form-center">
+                     
+                        
+                     <div class="button-container">
+                      <button type="submit" name="choice" value="yes" class="custom-button">Yes</button>                  
+                     <button type="submit" name="choice" value="no" class="custom-button">No</button> 
+                    </div>
+                     
+                  </div>
+                  
+                 </form>
+                  </div>
+              </div>
+           
+       
+            </div> 
+
+
+
+
+
+
+{% endblock %}

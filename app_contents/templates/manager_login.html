@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/register.css') }}">
+</link>
+{% endblock %}
+
+{% block title %}
+Store Manager Login
+{% endblock %}
+{% block content %}
+<section1>
+ 
+
+  <div class="form-box">
+
+    <div class="form-value">
+
+      <form method="post">
+
+        <h2>Store Manager's Login</h2>
+
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="email" required value="{{ request.form['email'] }}">
+        </input>
+
+          <label>Email of the manager</label>
+
+        </div>
+
+        <div class="inputbox">
+
+       
+            <div class="password-input-container" class="inputbox">
+             
+              <input type="password" class="password-input"  name="password" required value="{{ request.form['password'] }}" placeholder="Password">
+              
+          </div>
+
+        </div>
+        <div class="register">
+
+          <p>Are you an existing user? <a href="{{ url_for('login_page')}}">Log in</a></p>
+      
+        </div>
+       
+      
+
+        
+        <button type="submit">Log In</button>
+        <div class="register">
+
+          <p>Are you a new manager? <a href="{{ url_for('new_manager')}}">Register</a></p>
+      
+        </div>
+
+     
+      </form>
+
+    </div>
+
+  </div>
+  
+ 
+
+</section1>
+
+
+
+{% endblock %}

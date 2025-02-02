@@ -1,0 +1,300 @@
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+section1 {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  min-height: 100vh;
+
+  width: 100%;
+
+  max-height: 100%;
+
+  background-color:#25283D ;
+
+  background-position: center;
+
+  background-size: cover;
+}
+
+.form-box {
+  position: relative;
+
+  width: 500px;
+
+  height: 563px;
+
+  background: transparent;
+
+  border: none;
+
+  border-radius: 20px;
+
+  backdrop-filter: blur(15px) brightness(80%);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+.registration-box {
+  position: relative;
+
+  width: 1000px;
+
+  height: 800px;
+
+  max-height:90%;
+
+  background: transparent;
+
+  border: none;
+
+  border-radius: 20px;
+
+  backdrop-filter: blur(15px) brightness(80%);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+h2 {
+  font-size: 2.5em;
+
+  color: #fff;
+  padding: 20px 20px 40px 20px;
+  
+
+  text-align: center;
+}
+
+.inputbox {
+  position: relative;
+
+  margin: 30px 0;
+
+  width: 100%;
+
+  border-bottom: 2px solid #fff;
+}
+
+.inputbox label {
+  position: absolute;
+
+  top: 50%;
+
+  left: 5px;
+
+  transform: translateY(-50%);
+
+  color: #fff;
+
+  font-size: 1.2em;
+
+  pointer-events: none;
+
+  transition: 0.5s;
+}
+
+
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -5px;
+}
+
+
+
+.inputbox input {
+  width: 100%;
+
+  height: 50px;
+
+  background: transparent;
+
+  border: none;
+
+  outline: none;
+
+  font-size: 1.5em;
+
+  padding: 0 35px 0 5px;
+
+  color: #fff;
+}
+
+.inputbox ion-icon {
+  position: absolute;
+
+  right: 8px;
+
+  color: #fff;
+
+  font-size: 1.2em;
+
+  top: 20px;
+ 
+}
+
+.forget {
+  margin: -10px 0 17px;
+
+  font-size: 1.2em;
+
+  color: #fff;
+
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.forget label input {
+  margin-right: 3px;
+}
+
+.forget a {
+  color: #fff;
+
+  text-decoration: none;
+}
+
+.forget a:hover {
+  text-decoration: underline;
+}
+
+button {
+  width: 100%;
+
+  height: 40px;
+
+  border-radius: 40px;
+
+  background-color: #fff;
+
+  border: none;
+
+  outline: none;
+
+  cursor: pointer;
+
+  font-size: 1.2em;
+
+  font-weight: 600;
+  display: block;
+}
+
+.register {
+  font-size: 1.1em;
+
+  color: #fff;
+
+  text-align: center;
+
+  margin: 25px 0 10px;
+  padding: 0 0 10px 0px;
+}
+
+.register p a {
+  text-decoration: none;
+
+  color: #fff;
+
+  font-weight: 600;
+}
+
+.register p a:hover {
+  text-decoration: underline;
+}
+
+
+@media screen and (max-width: 480px) {
+  .form-box {
+    width: 100%;
+    border-radius: 0px;
+  }
+}
+
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: inline-block;
+  background-size: 300%;
+  background-image: url("{{ url_for('static', filename='eye.png') }}"); 
+}
+.password-inputbox label {
+position: absolute;
+
+top: 50%;
+
+left: 5px;
+
+transform: translateY(-50%);
+
+color: #fff;
+
+font-size: 1.2em;
+
+pointer-events: none;
+
+
+
+transition: 0.5s;
+}
+
+
+.form-value1{
+  padding: auto;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  color:white;
+}
+
+.inputbox1{
+  width: auto;
+  margin-top: 100px;
+}
+
+
+.upload{
+  color:white;
+}
+
+.upload1{
+  margin-bottom: 70px;
+}

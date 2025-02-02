@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/register.css') }}">
+</link>
+{% endblock %}
+
+{% block title %}
+Modifying Category
+{% endblock %}
+{% block content %}
+
+
+<section1>
+ 
+
+  <div class="registration-box">
+
+    <div class="form-value">
+
+      <form method="post">
+
+        <h2>Modifying {{category.category_name}} Category</h2>
+        
+
+        <div class="inputbox">
+
+          <ion-icon name="mail-outline"></ion-icon>
+          
+          <input type="text" name="name" required value="{{ request.form['name'] }}">
+        </input>
+
+          <label>{{category.category_name}}'s New Name</label>
+
+        </div>
+        <div class="register">
+
+          <p>Delete Category? <a href="{{ url_for('delete_cat', id=category.c_id)}}">Click here</a></p>
+  
+        </div>
+        <button type="submit">Modify</button>
+        </form>
+        </div>
+        </div>
+        </section1>
+
+{% endblock %}

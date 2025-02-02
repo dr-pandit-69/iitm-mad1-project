@@ -1,0 +1,268 @@
+
+
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  background: #25283D;
+  font-family: 'Hind', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Start Navigation Bar */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #25283D;
+  color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo_text {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.logo_text_1 {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0;
+  padding: 0;
+  margin-right: 20px;
+  font-size: 18px;
+  transition: background-color 0.5s ease;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.menu a:hover {
+  background-color: #8F3985;
+  display: inline-flex;
+  color: #ffffff;
+}
+
+.menu li.home a,
+.menu li.shop a {
+  font-size: 22px; /* Adjust the font size as needed */
+}
+
+.fa {
+  font-size: 18px;
+  margin-left: 10px;
+  transition: color 0.5s ease;
+}
+
+.cart-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  background-color: #8F3985;
+  color: #ffffff;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+@media (max-width: 820px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .menu {
+    margin-top: 10px;
+  }
+}
+
+
+
+
+/* End Navigation Bar */
+
+/* Start Single Section Menu */
+
+.container {
+  display: none;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  text-align: left;
+  margin-bottom: 30px;
+  
+}
+
+.container__list {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.container__listItem {
+  flex: 0 0 50%;
+  padding: 10px 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.container__listItem > div {
+  color: #DB6356;
+  text-decoration: underline;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* End Single Section Menu */
+
+/* Start Multiple Section Menu */
+.container.has-multi .container__listItem {
+  flex-basis: 50%;
+}
+
+.container.has-multi .container__list {
+  flex-basis: 10;
+  border-radius: 4px;
+}
+
+.container.has-multi .container__list:not(:last-child) {
+  border-right: solid 1px #f3f3f3;
+  margin-right: 20px;
+}
+
+/* End Multiple Section Menu */
+
+@import url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+
+.fa{
+  line-height:30px;
+  font-size:30px;
+  display:inline-bloxk;
+  width:35px;
+  height:35px;
+}
+.hidden{
+  display:none;
+}
+
+input[type=checkbox] + label {
+  position:relative;
+} 
+
+input[type=checkbox]:checked + label {
+  animation: closing 0.3s forwards ease-in-out,
+             moving 0.3s forwards ease-in-out;
+} 
+.pointer-cursor{
+   cursor: pointer; cursor: hand;
+}
+.close{
+
+    float:right;
+    color: #b94b45;
+    cursor: pointer; cursor: hand;
+}
+
+.alert-message{
+  background-color: #f2dede;
+  border: 0px solid rgba(#34495e, 0.25);
+  color: #b94b45;
+  border-radius: 3px;
+  line-height:30px;
+  position: absolute;
+  top: 0; left: 0;
+  display:block;
+  width:100%;
+  padding: 12px;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, .9);
+  box-shadow: 0px 10px 50px rgba(0,0,0,.6);
+  background:#ff0000;
+  font-size: x-large;
+  
+}
+
+.normal-message{
+  background-color: #f2dede;
+  border: 0px solid rgba(#34495e, 0.25);
+  color: #b94b45;
+  border-radius: 3px;
+  line-height:30px;
+  position: absolute;
+  top: 0; left: 0;
+  display:block;
+  width:100%;
+  padding: 12px;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, .9);
+  box-shadow: 0px 10px 50px rgba(0,0,0,.6);
+  background:#00ff11;
+  font-size: x-large;
+  
+}
+
+
+@keyframes closing {
+  from {
+    opacity: 1; 
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes moving {
+  0%, 90% { top: 0; left: 0; }
+  100%  { top: -100px; left: 0; }
+}
+
+
